@@ -8,17 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State
+    private var num: Int = 0
+    
+    @State
+    private var isValid: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            VStack {
+                Text("aa")
+                
+                Button {
+                    isValid.toggle()
+                } label: {
+                    Text("\(num)")
+                }
+            }
+
+        }.sheet(isPresented: $isValid) {
+            SecondView(values: $num)
         }
-        .padding()
+        
     }
 }
 
 #Preview {
     ContentView()
+}
+
+struct SecondView: View {
+    
+    @Binding
+    var values: Int
+    
+    var body: some View {
+        ZStack {
+            Text("\(values)")
+                .bold()
+                .font(.title)
+                .foregroundStyle(.red)
+        }
+    }
+    
 }
