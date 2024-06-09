@@ -28,7 +28,7 @@ struct ContentView: View {
         }.sheet(isPresented: Binding(get: { container.state.isValid }, set: { value in
             container.send(.viewDismiss(value))
         }), content: {
-            SecondView(values: container.state.num)
+            SecondView(values: container.state.num, text: container.state.text)
         })
         
     }
@@ -42,13 +42,21 @@ struct ContentView: View {
 struct SecondView: View {
     
     var values: Int
+    var text: String
     
     var body: some View {
         ZStack {
-            Text("\(values)")
+            VStack {
+                Text("\(values)")
+                    .bold()
+                    .font(.title)
+                .foregroundStyle(.red)
+            }
+            
+            Text(text)
                 .bold()
                 .font(.title)
-                .foregroundStyle(.red)
+                .foregroundStyle(.black)
         }
     }
     
