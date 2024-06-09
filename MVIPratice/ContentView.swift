@@ -9,11 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State
-    private var num: Int = 0
-    
-    @State
-    private var isValid: Bool = false
+    @StateObject
+    var container = MVIContainer()
     
     var body: some View {
         ZStack {
@@ -21,17 +18,21 @@ struct ContentView: View {
                 Text("aa")
                 
                 Button {
-                    isValid.toggle()
+                    container.send(.buttonTouch)
                 } label: {
-                    Text("\(num)")
+                    Text("\(container.state.num)")
                 }
+                
             }
 
-        }.sheet(isPresented: $isValid) {
-            SecondView(values: $num)
-        }
+        }.sheet(isPresented: Binding(get: { container.state.isValid }, set: { value in
+            container.send(.viewDismiss(value))
+        }), content: {
+            SecondView(values: container.state.num)
+        })
         
     }
+    
 }
 
 #Preview {
@@ -40,7 +41,6 @@ struct ContentView: View {
 
 struct SecondView: View {
     
-    @Binding
     var values: Int
     
     var body: some View {

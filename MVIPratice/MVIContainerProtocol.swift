@@ -8,10 +8,12 @@
 import Foundation
 
 protocol MVIContainerProtocol {
+    
     associatedtype Intent
-//    associatedtype UserState
+    associatedtype State
     
-//    var state: UserState { get set }
+    var state: State { get }
     
-    func send(_ intent: Intent) 
+    func send(_ intent: Intent)
+    
 }
