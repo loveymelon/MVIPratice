@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
-final class NumberModel {
-    @Published var isValid: Bool = false
+struct NumberState {
+    var isValid: Bool = false
+    var num: Int = 0
 }

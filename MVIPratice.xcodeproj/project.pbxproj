@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DF77243F2C135C7B005566A4 /* MVIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF77243E2C135C7B005566A4 /* MVIContainer.swift */; };
+		DF7724412C143D90005566A4 /* MVIContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7724402C143D90005566A4 /* MVIContainerProtocol.swift */; };
 		DF7EDEB42C13272A009617AE /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7EDEB32C13272A009617AE /* FirstView.swift */; };
 		DF7EDEB62C13299F009617AE /* NumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7EDEB52C13299F009617AE /* NumberModel.swift */; };
 		DF7EDEB82C1329B4009617AE /* NumberIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7EDEB72C1329B4009617AE /* NumberIntent.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		DF77243E2C135C7B005566A4 /* MVIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVIContainer.swift; sourceTree = "<group>"; };
+		DF7724402C143D90005566A4 /* MVIContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVIContainerProtocol.swift; sourceTree = "<group>"; };
 		DF7EDEB32C13272A009617AE /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		DF7EDEB52C13299F009617AE /* NumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberModel.swift; sourceTree = "<group>"; };
 		DF7EDEB72C1329B4009617AE /* NumberIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberIntent.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				DF7EDEB52C13299F009617AE /* NumberModel.swift */,
 				DF7EDEB72C1329B4009617AE /* NumberIntent.swift */,
 				DF77243E2C135C7B005566A4 /* MVIContainer.swift */,
+				DF7724402C143D90005566A4 /* MVIContainerProtocol.swift */,
 			);
 			path = MVIPratice;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				DF7EDEB42C13272A009617AE /* FirstView.swift in Sources */,
 				DF77243F2C135C7B005566A4 /* MVIContainer.swift in Sources */,
 				DF7EDEB62C13299F009617AE /* NumberModel.swift in Sources */,
+				DF7724412C143D90005566A4 /* MVIContainerProtocol.swift in Sources */,
 				DF8A92DA2C130B0100AF040C /* MVIPraticeApp.swift in Sources */,
 				DF7EDEB82C1329B4009617AE /* NumberIntent.swift in Sources */,
 			);
