@@ -15,7 +15,6 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("aa")
                 
                 Button {
                     container.send(.buttonTouch)
